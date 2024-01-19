@@ -7,6 +7,8 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="./images/cup.png" type="image/x-icon">
     <title>Tea House</title>
+    <!-- font awesome cdn link -->
+    <script src="https://kit.fontawesome.com/cd6c7339f0.js" crossorigin="anonymous"></script>
     <!-- manrope google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +24,9 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        teaPrimary: '#FF8938',
+                        teaTitle: '#1C1C1C',
+                        teaDescription: '#777',
                     }
                 }
             }
@@ -37,7 +42,92 @@
 
 <body class="font-manrope">
     <!-- header section -->
-    <header>
+    <header class="md:container md:mx-auto pr-3 md:pr-0">
+        <!-- navbar section -->
+        <nav>
+            <div class="navbar bg-base-100 my-2 md:my-5 lg:px-5 xl:px-0">
+                <div class="flex-1">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button"
+                            class="btn btn-ghost lg:hidden hover:bg-bikePrimary hover:text-white duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base">
+                            <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Home</a>
+                            </li>
+                            <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Shop</a>
+                            </li>
+                            <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">News</a>
+                            </li>
+                            <li><a
+                                    class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a
+                        class="btn btn-ghost text-2xl font-bold md:text-4xl hover:bg-gradient-to-r from-red-500 to-yellow-500 hover:text-white text-black">Tea
+                        House</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-base text-black gap-5">
+                        <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Home</a>
+                        </li>
+                        <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Shop</a></li>
+                        <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">News</a></li>
+                        <li><a class="hover:text-white hover:bg-gradient-to-r from-red-500 to-yellow-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ml-5">
+                    <ul class="menu text-base text-black">
+                        <li>
+                            <a
+                                class="text-white bg-gradient-to-r from-red-500 to-yellow-500 hover:scale-110 duration-300">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- header banner section -->
+        <section class="flex flex-col lg:flex-row items-center py-24 gap-20 lg:gap-5 px-5 md:px-0">
+            <!-- banner left -->
+            <div class="flex-1">
+                <h1 class="text-4xl md:text-6xl lg:text-8xl text-teaTitle font-extrabold lg:leading-[7rem]">It's good
+                    <br> tea time
+                    at The
+                    <br>
+                    Tea
+                    House
+                </h1>
+                <p class="font-medium text-teaDescription my-5">Tea and Botanical Solutions Supplier Give Optimum <br>
+                    Satisfaction To Your
+                    Taste
+                    Buds.</p>
+                <button
+                    class="btn text-white text-lg bg-gradient-to-r from-red-500 to-yellow-500 hover:scale-105 duration-300 ">Explore
+                    More <span><i class="fa-solid fa-up-right-from-square"></i></span></button>
+            </div>
+            <!-- banner right -->
+            <div class="flex-1">
+                <div class="flex justify-center">
+                    <img src="./images/banner.png" alt="">
+                </div>
+                <!-- rating box -->
+                <div
+                    class="-mt-12 lg:-mt-20 ml-12 lg:ml-24 h-24 w-[14rem] drop-shadow-lg bg-white rounded-lg flex items-center justify-between p-4">
+                    <div class="text-yellow-400 text-4xl"><i class="fa-solid fa-star"></i></div>
+                    <div>
+                        <h3 class="text-teaTitle font-extrabold text-2xl">5.00</h3>
+                        <p class="text-teaDescription font-medium">Trust Pilot Ratings</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
     <!-- main section -->
     <main></main>
